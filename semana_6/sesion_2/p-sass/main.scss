@@ -1,0 +1,61 @@
+@import "variables";
+
+
+h1 {
+  color: $color-primary;
+}
+
+// extend
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+.warning {
+  @extend %message-shared;
+  border-color: orange;
+}
+
+// operator 
+.container {
+  width: 100%;
+}
+
+article {
+  float: left;
+  width: 600px / 960px * 100%;
+}
+
+aside {
+  float: right;
+  width: 300px / 960px * 100%;
+}
+
+// combinadores 
+// h1 {
+//   + p {
+//     border-top: 1px solid gray;
+//   }
+// }
+
+p {
+  ~ {
+    span {
+      opacity: 0.8;
+    }
+  }
+}

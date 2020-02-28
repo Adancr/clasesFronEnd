@@ -1,0 +1,40 @@
+h1 {
+  color: blue;
+}
+
+.message, .success, .error, .warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: orange;
+}
+
+.container {
+  width: 100%;
+}
+
+article {
+  float: left;
+  width: 62.5%;
+}
+
+aside {
+  float: right;
+  width: 31.25%;
+}
+
+p ~ span {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=main.css.map */

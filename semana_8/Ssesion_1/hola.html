@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+ 
+    function algoritmo()
+    {
+        let dias_de_estadia, monto_a_pagar;
+        dias_de_estadia = parseInt (document.formulario1.dias_de_estadia.value);
+        if(dias_de_estadia==1)
+            monto_a_pagar=500;
+        else
+            monto_a_pagar=500+(dias_de_estadia-1)*400;
+        document.formulario1.monto_a_pagar.value = monto_a_pagar;
+    }
+     
+            </script>
+</head>
+<body>
+  form name="formulario1">
+  <table style="text-align: left; margin-left: auto; margin-right: auto;">
+      <tbody>
+          <tr>
+              <td>
+                  <label for="dias_de_estadia">Ingrese el valor de dias de estadia:</label>
+              </td>
+              <td>
+                  <input name="dias_de_estadia" required="required" step="1" type="number" />
+              </td>
+          </tr>
+          <tr align="center">
+              <td colspan="2" rowspan="1">
+                  <input value="Procesar" type="button" onclick="algoritmo();" />
+                  <input type="reset" />
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <label for="monto_a_pagar">Valor de monto a pagar:</label>
+              </td>
+              <td>
+                  <input name="monto_a_pagar" step="1" type="number" />
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</form>
+
+
+</body>
+</html>

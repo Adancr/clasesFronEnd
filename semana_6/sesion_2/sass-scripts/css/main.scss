@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin box ($height, $width, $background-color, $measure) {
+  height: #{$height}#{$measure};
+  width: #{$width}#{$measure};
+  background-color: $background-color;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  max-width: 960px;
+  aside {
+    // width: #{(30 * 960) / 100}px;
+    @include box (100, 200, blue, px);
+  }
+}
+
+section {
+  @include box (30, 60, red, px);
+}
