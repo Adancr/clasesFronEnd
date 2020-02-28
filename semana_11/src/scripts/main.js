@@ -1,7 +1,9 @@
 document.getElementById("footer")
 document.getElementsByTagName('header')
 document.querySelector('li') //solo el primer elemento
-document.querySelectorAll('li') //todos los elementos
+document.querySelector('#li') //por el ID
+document.querySelector('.li') //por el clase
+document.querySelectorAll('li') //todos los elementos y retorna un elemento de nodos
 // document.querySelectorAll('li').forEach(function(li) {console.log(li)}) //recorrer con forEach
 
 document.querySelector('nav') //PannerNode atrapa el padre
@@ -24,3 +26,31 @@ document.querySelectorAll('li')[1] //array atravez de sus indices
 document.getElementsByTagName('li')[2] //coleccion html tambine pondemos coger por le indice
 
 document.querySelector('ul').closest('body').querySelector('main') //navegar hacia cierto punto con closest
+
+/**MANIPULAR EMELENTOS**/
+// console.log('%O', document.querySelector('header')); //propiedades y metodos
+
+let header = document.querySelector('header')
+
+header
+header.className //ver clase name
+header.innerHTML //ver los elementos lo esta dentro
+header.outerHTML //atrpa todo el estructora HTML 
+header.innerText //va imprimir los textos q esta dentro del header
+header.style //todo los stylos q puede palicar a header
+
+header.style.border = '2px solid red'
+
+document.querySelectorAll('a')
+document.querySelectorAll('a').forEach(function(element) {
+  element.style.color = 'inherit'
+})
+
+// agregar atributos
+
+document.querySelector('p').setAttribute('class', 'calse1 clase2')
+document.querySelector('p').setAttribute('style', 'color: red') //add
+// document.querySelector('p').removeAttribute('style', 'color: red') //remove
+document.querySelector('p').setAttribute('id', 'id1')
+
+document.querySelector('header').dataset
