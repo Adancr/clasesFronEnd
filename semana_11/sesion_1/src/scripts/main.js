@@ -28,7 +28,7 @@ document.getElementsByTagName('li')[2] //coleccion html tambine pondemos coger p
 document.querySelector('ul').closest('body').querySelector('main') //navegar hacia cierto punto con closest
 
 /**MANIPULAR EMELENTOS**/
-// console.log('%O', document.querySelector('header')); //propiedades y metodos
+//  //propiedades y metodos
 
 let header = document.querySelector('header')
 
@@ -39,7 +39,7 @@ header.outerHTML //atrpa todo el estructora HTML
 header.innerText //va imprimir los textos q esta dentro del header
 header.style //todo los stylos q puede palicar a header
 
-header.style.border = '2px solid red'
+// header.style.border = '2px solid red'
 
 document.querySelectorAll('a')
 document.querySelectorAll('a').forEach(function(element) {
@@ -53,4 +53,15 @@ document.querySelector('p').setAttribute('style', 'color: red') //add
 // document.querySelector('p').removeAttribute('style', 'color: red') //remove
 document.querySelector('p').setAttribute('id', 'id1')
 
-document.querySelector('header').dataset
+document.querySelector('header').clientHeight
+
+document.querySelector('header').dataset //me trae un objeto con el valor de names
+document.querySelector('header').dataset.names 
+
+let buttonMenu = document.querySelector('button');
+let nav = document.querySelector('nav');
+// console.log(buttonMenu);
+buttonMenu.onclick = function() {
+  nav.setAttribute("style", "dispaly:block")
+}
+
